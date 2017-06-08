@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center">
+
+    <LinearLayout
+        android:id="@+id/story_container_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:padding="16dp">
+
+        <RelativeLayout
+            android:id="@+id/story_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/story_points"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:textSize="@dimen/text_small_body"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="42dp"
+                android:gravity="center"
+                android:textColor="@color/black"/>
+
+            <TextView
+                android:id="@+id/story_title"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/story_points"
+                android:textSize="18sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/story_author"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/story_points"
+                android:layout_below="@id/story_title"
+                android:textSize="14sp"
+                android:textColor="@color/hn_orange_dark"
+                android:layout_marginTop="4dp"
+                android:layout_marginLeft="15dp"/>
+
+            <TextView
+                android:id="@+id/story_website"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/story_title"
+                android:layout_marginTop="4dp"
+                android:layout_toRightOf="@id/story_author"/>
+
+            <TextView
+                android:id="@+id/story_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/story_title"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:layout_toRightOf="@id/story_website"
+                android:layout_marginTop="4dp"
+                android:ellipsize="end"
+                android:maxLines="1"/>
+
+            <!--<TextView-->
+                <!--android:id="@+id/text_post_author"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_alignParentLeft="true"-->
+                <!--android:textSize="@dimen/text_body" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/text_post_separator"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/text_post_author"-->
+                <!--android:paddingLeft="8dp"-->
+                <!--android:paddingRight="8dp"-->
+                <!--android:textSize="@dimen/text_body"-->
+                <!--android:text="@string/seperator_name_points" />-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/text_post_date"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_toRightOf="@+id/text_post_separator"-->
+                <!--android:textSize="@dimen/text_body"-->
+                <!--android:textColor="@color/hn_orange" />-->
+
+        </RelativeLayout>
+
+        <!--<TextView-->
+            <!--android:id="@+id/text_post_text"-->
+            <!--android:layout_width="match_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:autoLink="web|email"-->
+            <!--android:textColor="@android:color/black"-->
+            <!--android:textSize="18sp" />-->
+
+    </LinearLayout>
+
+</FrameLayout>
