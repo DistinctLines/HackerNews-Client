@@ -110,7 +110,7 @@ public class MainActivity extends BaseActivity implements MainActivityView, Swip
         initRecyclerView();
         setupToolbar();
 
-        TinyDancer.create().show(this);
+//        TinyDancer.create().show(this);
 
     }
 
