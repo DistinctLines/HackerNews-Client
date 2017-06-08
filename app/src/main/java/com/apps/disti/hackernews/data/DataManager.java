@@ -107,21 +107,6 @@ public class DataManager {
                 });
     }
 
-    public Observable<String> getNames(){
-        List list = new ArrayList();
-        list.add("Taylor");
-        list.add("Houynd");
-        list.add("Bat");
-
-        return Observable.from(list)
-                .concatMap(new Func1() {
-                    @Override
-                    public Object call(Object o) {
-                        return Observable.just(o.toString());
-                    }
-                });
-    }
-
     public Observable<Post> getUserPosts(String user) {
         return mHackerNewsService.getUser(user)
                 .concatMap(new Func1<User, Observable<? extends Post>>() {
@@ -187,6 +172,8 @@ public class DataManager {
                     @Override
                     public Observable<Comment> call(Comment comment) {
                         comment.depth = depth;
+                        if(comment.depth == 0)
+                            comment.depth = 1;
                         if (comment.kids == null || comment.kids.isEmpty()) {
                             return Observable.just(comment);
                         } else {

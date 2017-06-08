@@ -14,5 +14,4 @@ public interface StoryListInteractor<T> {
     Subscription getTopStories(RequestCallback<T> callback);
     Subscription getBestStories(RequestCallback<T> callback);
     Subscription getNewStories(RequestCallback<T> callback);
-    Subscription getList();
 }

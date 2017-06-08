@@ -173,32 +173,6 @@ public class CommentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         }
     }
 
-//    public class CommentCollapsedViewHolder extends RecyclerView.ViewHolder {
-//
-//        TextView mAuthor;
-//        TextView mTimeStamp;
-//        TextView mCollapsedNumComments;
-//        LinearLayout mLinearLayout;
-//
-//        public CommentCollapsedViewHolder(final View itemView, final StoryDetailRecyclerListener storyDetailRecyclerListener) {
-//            super(itemView);
-//            this.mAuthor = (TextView) itemView.findViewById(R.id.collapsed_author);
-//            this.mTimeStamp = (TextView) itemView.findViewById(R.id.collapsed_timestamp);
-//            this.mCollapsedNumComments = (TextView) itemView.findViewById(R.id.collapsed_num_comments);
-//            this.mLinearLayout = (LinearLayout) itemView.findViewById(R.id.collapsed_linear);
-//
-//        }
-//
-//        public void setCommentInfo(Comment comment){
-//
-//            mAuthor.setText(comment.by);
-//            mTimeStamp.setText(new PrettyTime().format(new Date(comment.time * 1000)));
-//            mCollapsedNumComments.setText("50");
-//        }
-//
-//
-//    }
-
     public boolean areChildrenHidden(int position){
         Log.e("Clicked","position" + position);
         Comment comment = (Comment) mComments.get(position);

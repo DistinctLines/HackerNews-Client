@@ -90,17 +90,17 @@ public class StoryListInteractorImpl implements StoryListInteractor<Post> {
                 });
     }
 
-    public Subscription getList(){
-        return dataManager.getNames()
-                .observeOn(AndroidSchedulers.mainThread())
-                .subscribeOn(dataManager.getScheduler())
-                .subscribe(new Action1<String>() {
-                    @Override
-                    public void call(String s) {
-                        Log.e("String", " " + s);
-                    }
-                });
-    }
+//    public Subscription getList(){
+//        return dataManager.getNames()
+//                .observeOn(AndroidSchedulers.mainThread())
+//                .subscribeOn(dataManager.getScheduler())
+//                .subscribe(new Action1<String>() {
+//                    @Override
+//                    public void call(String s) {
+//                        Log.e("String", " " + s);
+//                    }
+//                });
+//    }
 
 //    @Override
 //    public Subscription getTopStories(final RequestCallback<Post> callback) {

@@ -61,22 +61,25 @@ public class CommentViewHolder extends RecyclerView.ViewHolder {
         return new CommentViewHolder(inflater.inflate(R.layout.item_comments_list, parent, false));
     }
 
-    public static void bind(Context context, final int position, final CommentViewHolder holder, Comment comment, int hiddenChildrenCount, final CommentAdapter.StoryDetailRecyclerListener listener){
+    public static void bind(Context context, final int position, final CommentViewHolder holder, final Comment comment, int hiddenChildrenCount, final CommentAdapter.StoryDetailRecyclerListener listener){
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.e("depth", " " + comment.depth);
                 listener.onCommentClicked(holder.getLayoutPosition());
             }
         });
         holder.mCommentText.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.e("depth", " " + comment.depth);
                 listener.onCommentClicked(position);
             }
         });
         holder.mContainer.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Log.e("depth", " " + comment.depth);
                 listener.onCommentClicked(position);
             }
         });
@@ -109,8 +112,7 @@ public class CommentViewHolder extends RecyclerView.ViewHolder {
     }
 
     private void setCommentIndent(int depth, Context context) {
-        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams)
-                mComment.getLayoutParams();
+        RelativeLayout.LayoutParams layoutParams = (RelativeLayout.LayoutParams) mComment.getLayoutParams();
         float margin = com.apps.disti.hackernews.utils.ViewUtils.convertPixelsToDp(depth * 30, context);
         layoutParams.setMargins((int) margin, 0, 0, 0);
         mComment.setLayoutParams(layoutParams);

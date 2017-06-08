@@ -41,7 +41,7 @@ public class StoryListPresenterImpl extends BasePresentImpl<MainActivityView, Po
     @Override
     public void loadStories(int type){
 
-        storyListInteractor.getList();
+//        storyListInteractor.getList();
 
         switch(type){
             case TOP_STORIES:
