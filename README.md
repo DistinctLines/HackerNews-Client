@@ -7,10 +7,10 @@ An Android HackerNews client, implemented using Android SDK, Dagger2, rxjava and
 
 Features
 
-	• Displays: Top, New and Best Stories
+• Displays: Top, New and Best Stories
 
-	• View post link webpage
+• View post link webpage
 
-	• View post details: points, author and comment numbers
+• View post details: points, author and comment numbers
 
-	• Collapsible comment threads, with child counts
+• Collapsible comment threads, with child counts
